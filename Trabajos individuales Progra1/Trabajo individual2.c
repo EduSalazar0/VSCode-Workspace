@@ -9,7 +9,7 @@ int main(){
     if ( strcmp(h, "Si") == 0 || strcmp(h, "si") == 0 ){ // Dentro de un If utilizo strcmp para comparar chars.
         for (i = 1; i <= 20; i++){ // Sentencia repetitiva que va a ingresar numero por numero hasta llegar al 20.
             a = 3 * i; // Operacion para obtener las respuestas necesarias.
-            printf("\n3 X %d =  %d ",i, a); // Imprime las respuestas.
+            printf("\n3 X %d =  %d ",i, a); // Imprime las respuestas que se desea revisar.
         }
     }else {
         printf("Gracias por probar el programa\n"); // En caso de no cumplir el if imprime este mensaje de agradecimiento.
