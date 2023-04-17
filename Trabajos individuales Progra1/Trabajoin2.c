@@ -12,7 +12,7 @@ int main(){
             printf("\n3 X %d =  %d ",i, a); // Imprime las respuestas que se desea imprimir.
         }
     }else {
-        printf("Gracias por probar el programa\n"); // En caso de no cumplir el if imprime este mensaje de agradecimiento
+        printf("Gracias por probar el programa\n"); // En caso de no cumplir el if imprime este mensaje de agradecimiento.
     }  
     return 0;
 }
