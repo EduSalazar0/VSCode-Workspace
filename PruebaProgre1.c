@@ -5,7 +5,7 @@ int main(int argc, char *argv[]){// Definicion de main
     printf("Escribe un numero en decimal\n");// Peticion de usuario para ingresar numeros
     scanf("%d",&decimal);// Escaneo de valor de usuario
     while(decimal >= 16){// While para comparar numero ingresado entre 16
-        decimal = [decimal/16]; // conversion de numero a hexadecimal
+        decimal = decimal%16; // conversion de numero a hexadecimal
     }
     printf("%d",hex[decimal]); // Impresion del numero en hexadecimal
 }
