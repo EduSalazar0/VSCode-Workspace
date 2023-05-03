@@ -1,11 +1,16 @@
 #include <stdio.h>
-int main(int argc, char *argv[]){// Definicion de main
-    int decimal;// Definicion de valor int
-    char hex[16] = {'1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};//Definicion de char hex con la finalidad de igualarlo a los valor de hexadecimal
-    printf("Escribe un numero en decimal\n");// Peticion de usuario para ingresar numeros
-    scanf("%d",&decimal);// Escaneo de valor de usuario
-    while(decimal >= 16){// While para comparar numero ingresado entre 16
-        decimal = decimal%16; // conversion de numero a hexadecimal
+int main() {
+    int num, numhex = 0, i = 1, rem; // Definicion de variables para el num ingresado,numero hexadecimal, i como contador y rem como variable acumuladora
+    printf("Ingrese el numero que quiere transformar a hexadecimal: ");// Solicitud a usuario para ingresar un numero
+    scanf("%d", &num); // Escaneo de numero ingresado por el usuario
+
+    // Convertir decimal a hexadecimal
+    while (num > 0) {
+        rem = num % 16;  // Obtener el residuo de dividir por 16
+        numhex += rem * i;     // Multiplicar el residuo por 16^n y sumar al resultado
+        i *= 10;                // Incrementar la posición del dígito hexadecimal
+        num /= 16;      // Dividir el decimal entre 16 para continuar la conversión
     }
-    printf("%d",hex[decimal]); // Impresion del numero en hexadecimal
+    printf("El numero hexadecimal es: %X\n", numhex);// Imprimir el número hexadecimal
+    return 0;
 }
