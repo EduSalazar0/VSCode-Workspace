@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #define filas 40
 #define columnas 40
-int main(){
+int main(){  
     int X[filas][columnas]; //Definicion de matriz con n filas y n columnas
     int f,c,i,j; // Definicion de variables
     //Inicializacion del programa encargado de obtener los datos que ingresa el usuario
@@ -26,9 +26,12 @@ int main(){
         printf("\n");
     }
     //Transformacion de diagonal principal en 1
-    system("cls");
     for(i=0;i<f;i++){
-            X[i][i]=1;
+        for(j=0;j<c;j++){
+            if(i==j){
+                X[i][j]=1;
+            }
+        }
         }
    printf("La matriz X con su diagonal de 1's: \n");
     for(i=0;i<f;i++){
@@ -36,5 +39,7 @@ int main(){
             printf("( %d )",X[i][j]);
         }
         printf("\n");
+        }
     return 0;
+
 }
