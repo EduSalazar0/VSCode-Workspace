@@ -10,13 +10,14 @@ int main(){
     scanf("%d",&f);
     printf("Ingrese de cuantas columnas va a queres su matriz? ");
     scanf("%d",&c);
-    //Impresión de matriz inicializada en cero
+    //Inicializacion de Matriz en cero
     system("cls");
     for (i=0;i<f;i++){
          for(j=0;j<c;j++){
             X[i][j] = 0;
          }
     }
+    //Impresión de Matriz de ceros
     printf("La matriz X inicializada en 0: \n");
     for(i=0;i<f;i++){
         for(j=0;j<c;j++){
@@ -24,6 +25,16 @@ int main(){
         }
         printf("\n");
     }
-
+    //Transformacion de diagonal principal en 1
+    system("cls");
+    for(i=0;i<f;i++){
+            X[i][i]=1;
+        }
+   printf("La matriz X con su diagonal de 1's: \n");
+    for(i=0;i<f;i++){
+        for(j=0;j<c;j++){
+            printf("( %d )",X[i][j]);
+        }
+        printf("\n");
     return 0;
 }
