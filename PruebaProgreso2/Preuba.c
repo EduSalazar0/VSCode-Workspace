@@ -8,8 +8,8 @@ int crearmatriz(int matriz[3][23]){
             matriz[i][j]=rand()%11;
             printf(" %d ",matriz[i][j]);
         }
+        printf("\n");
     }
-    printf("\n");
     return matriz;
 }
 
